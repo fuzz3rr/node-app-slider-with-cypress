@@ -49,7 +49,7 @@ describe('Swiper Gallery Test', function () {
     cy.wait(2000);
     cy.get('.swiper-slide-active').should('contain', 'Rome');
   });
-  it.only('Check if slides displays correct information', function () {
+  it('Check if slides displays correct information', function () {
     cy.visit('http://localhost:3000');
     cy.get('.swiper-wrapper').should('exist');
     cy.get('.card-description').should('contain', 'Rome')
@@ -63,9 +63,3 @@ describe('Swiper Gallery Test', function () {
     cy.get('.card-description').should('contain', 'France')
   });
 });
-
-
-// Zweryfikuj, czy opis każdego slajdu jest wyświetlany poprawnie.
-// Krok 1: Otwórz stronę z galerią.
-// Krok 2: Dla każdego slajdu, sprawdź, czy tytuł i opis są wyświetlane.
-// Krok 3: Upewnij się, że tytuł i opis odpowiadają oczekiwanym treściom.
